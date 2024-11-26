@@ -1,0 +1,30 @@
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.container-2 {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.nav-left > img {
+  width: 90px;
+  height: 50px;
+}
+.TimKiem {
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.d-flex {
+  display: flex;
+}
+.d-flex > li {
+  margin: 0 10px;
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
