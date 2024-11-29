@@ -151,6 +151,7 @@ a:hover {
 #slider figure img {
   float: left;
   width: 20%;
+  height: 10%;
 }
 @keyframes slider {
   0% {

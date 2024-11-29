@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popper)
-
 function Header() {
   return (
     <div className="headerr">
@@ -36,16 +35,10 @@ function Header() {
           <nav className="d-flex">
             <ul className="d-flex">
               <li>
-                <a href="#">HOME</a>
+                <a href="#">Trang chủ</a>
               </li>
               <li>
-                <a href="#">PAGE</a>
-              </li>
-              <li>
-                <a href="#">SHOP</a>
-              </li>
-              <li>
-                <a href="#">CART</a>
+                <a href="#">Cửa hàng</a>
               </li>
             </ul>
           </nav>
@@ -61,12 +54,11 @@ function Header() {
         {/* log */}
         <div className="log">
           <a href="#" className="login">
-            <i class="fa-solid fa-right-to-bracket"></i>Log in
+            <i class="fa-solid fa-right-to-bracket"></i>Đăng nhập
           </a>
           <a href="#">
-            <i class="fas fa-edit"></i>Register
+            <i class="fas fa-edit"></i>Đăng ký
           </a>
-          <a href="#"></a>
         </div>
         {/* gio hang */}
         <div className="giohang">
