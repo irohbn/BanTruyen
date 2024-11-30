@@ -51,7 +51,7 @@ function Header() {
             </button>
           </div>
         </div>
-        {/* log */}
+        {/* log cua Hung*/}
         <div className="log">
           <a href="#" className="login">
             <i class="fa-solid fa-right-to-bracket"></i>Đăng nhập
@@ -60,7 +60,7 @@ function Header() {
             <i class="fas fa-edit"></i>Đăng ký
           </a>
         </div>
-        {/* gio hang */}
+        {/* gio hang cua Anh*/}
         <div className="giohang">
           <a href="#">
             <i class="fa-solid fa-bag-shopping"></i>

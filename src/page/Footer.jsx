@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <div>
@@ -37,8 +35,7 @@ const Footer = () => {
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 {/* Content */}
                 <h6 className="text-uppercase fw-bold mb-4">
-                  <i className="fas fa-gem me-3"></i>Giấy phép thành lập Nhà
-                  xuất bản
+                  Giấy phép thành lập Nhà xuất bản
                 </h6>
                 <p>
                   Giấy phép số: 517/GP-BTTTT ngày 6/10/2015 của Bộ Thông tin và

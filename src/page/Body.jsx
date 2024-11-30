@@ -1,122 +1,64 @@
+import { books } from "../JS/book"; // Import dữ liệu sách
+
+// Hàm render 5 quyển đầu
+function renderFirstFiveBooks() {
+  const firstFiveBooks = books.slice(0, 5);
+  return firstFiveBooks.map((book, index) => (
+    <a href="#" className="sale" key={index}>
+      <img src={book.img} alt={book.title} />
+      <p>{book.title}</p>
+      <span className="prince">{book.price}</span> <s>{book.originalPrice}</s>
+    </a>
+  ));
+}
+
+// Hàm render 5 quyển tiếp theo
+function renderNextFiveBooks() {
+  const nextFiveBooks = books.slice(5, 10);
+  return nextFiveBooks.map((book, index) => (
+    <a href="#" className="sale" key={index}>
+      <img src={book.img} alt={book.title} />
+      <p>{book.title}</p>
+      <span className="prince">{book.price}</span> <s>{book.originalPrice}</s>
+    </a>
+  ));
+}
+
+// Hàm render 4 quyển cuối
+function renderLastFourBooks() {
+  const lastFourBooks = books.slice(10, 14);
+  return lastFourBooks.map((book, index) => (
+    <a href="#" className="sale" key={index}>
+      <img src={book.img} alt={book.title} />
+      <p>{book.title}</p>
+      <span className="prince">{book.price}</span> <s>{book.originalPrice}</s>
+    </a>
+  ));
+}
+
 function Body() {
   return (
     <div>
+      {/* Phần 1: 5 Quyển đầu */}
       <div className="custom">
         <p className="h1 text-center mt-3 mb-3">Sách mới</p>
-        <div className="bok ">
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/b1.jpg"></img>
-            <p>
-              Xứ Sở Sương Mù - Cuộc <br></br> truy tầm Keo Dán Kí Ức
-            </p>
-            <span className="prince">94,500đ</span> <s>105,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/b2.webp"></img>
-            <p>
-              Chuột típ không muốn <br></br> chải răng
-            </p>
-            <span className="prince">22,500đ</span> <s>25,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/b3.webp"></img>
-            <p>Siêu nhân cua</p>
-            <span className="prince">45,000đ</span> <s>50,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/b4.jpg"></img>
-            <p>Pokemon</p>
-            <span className="prince">31,500đ</span> <s>35,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/b4.webp"></img>
-            <p>Tý Quậy</p>
-            <span className="prince">36,000đ</span> <s>40,000đ</s>
-          </a>
-        </div>
+        <div className="bok">{renderFirstFiveBooks()}</div>
       </div>
-      {/* 2 */}
+
+      {/* Phần 2: 5 Quyển tiếp theo */}
       <div className="custom2">
-        <p className="h2 text-center mt-3 mb-3">Sách bán chạy</p>
-        <div className="bok ">
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/conan.jpg"></img>
-            <p>Conan</p>
-            <span className="prince">94,500đ</span> <s>105,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/doremon.jpg"></img>
-            <p>
-              Doraemon Nobita và nước <br></br> Nhật thời nguyên thủy
-            </p>
-            <span className="prince">22,500đ</span> <s>25,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/kaitokid.jpg"></img>
-            <p>Kaitokid</p>
-            <span className="prince">45,000đ</span> <s>50,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/makuro.jpg"></img>
-            <p>Makuro</p>
-            <span className="prince">31,500đ</span> <s>35,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/akai.jpg"></img>
-            <p>Suichi akai</p>
-            <span className="prince">36,000đ</span> <s>40,000đ</s>
-          </a>
-        </div>
+        <p className="h1 text-center mt-3 mb-3">Sách bán chạy</p>
+        <div className="bok">{renderNextFiveBooks()}</div>
       </div>
+
       {/* quang cao */}
       <div className="banner mt-5">
         <img src="./public/img/banner.webp" className="mx-auto"></img>
       </div>
-      {/* sach combo */}
+      {/* Phần 3: 4 Quyển cuối */}
       <div className="custom3">
-        <p className="h2 text-center mt-3 mb-3">Combo</p>
-        <div className="bok ">
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/cb1.jpg"></img>
-            <p>
-              Combo Yona - Công chúa <br></br>bình minh (12 tập)
-            </p>
-            <span className="prince">270,000đ</span> <s>300,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/cb2.webp"></img>
-            <p>
-              Combo Siêu quậy Teppei <br></br>(31 tập)
-            </p>
-            <span className="prince">679,500đ</span> <s>775,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/cb3.webp"></img>
-            <p>
-              Combo Siêu đầu bếp nhí <br></br>(4 quyển)
-            </p>
-            <span className="prince">160,000đ</span> <s>200,000đ</s>
-          </a>
-          <a href="#" className="sale">
-            {" "}
-            <img src="./public/img/cb4.webp"></img>
-            <p>Doraemon BoxSet 1-4</p>
-            <span className="prince">810,000đ</span> <s>900,000đ</s>
-          </a>
-        </div>
+        <p className="h1 text-center mt-3 mb-3">Combo</p>
+        <div className="bok">{renderLastFourBooks()}</div>
       </div>
       <div className="ship">
         <div className="container text-center my-5">
