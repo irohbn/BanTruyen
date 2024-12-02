@@ -1,65 +1,37 @@
-import { books } from "../JS/book"; // Import dữ liệu sách
+import { newBooks, bestSellers, Combo, Manga } from "../JS/testbook";
 
-// Hàm render 5 quyển đầu
-function renderFirstFiveBooks() {
-  const firstFiveBooks = books.slice(0, 5);
-  return firstFiveBooks.map((book, index) => (
-    <a href="#" className="sale" key={index}>
-      <img src={book.img} alt={book.title} />
-      <p>{book.title}</p>
-      <span className="prince">{book.price}</span> <s>{book.originalPrice}</s>
-    </a>
-  ));
+function BookList({ title, books }) {
+  return (
+    <div className="custom">
+      <p className="h1 text-center mt-3 mb-3">{title}</p>
+      <div className="bok">
+        {books.map((book, index) => (
+          <a href="#" className="sale" key={index}>
+            <img src={book.img} alt={book.title} />
+            <p>{book.title}</p>
+            <span className="prince">{book.price}</span>{" "}
+            <s>{book.originalPrice}</s>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
 }
-
-// Hàm render 5 quyển tiếp theo
-function renderNextFiveBooks() {
-  const nextFiveBooks = books.slice(5, 10);
-  return nextFiveBooks.map((book, index) => (
-    <a href="#" className="sale" key={index}>
-      <img src={book.img} alt={book.title} />
-      <p>{book.title}</p>
-      <span className="prince">{book.price}</span> <s>{book.originalPrice}</s>
-    </a>
-  ));
-}
-
-// Hàm render 4 quyển cuối
-function renderLastFourBooks() {
-  const lastFourBooks = books.slice(10, 14);
-  return lastFourBooks.map((book, index) => (
-    <a href="#" className="sale" key={index}>
-      <img src={book.img} alt={book.title} />
-      <p>{book.title}</p>
-      <span className="prince">{book.price}</span> <s>{book.originalPrice}</s>
-    </a>
-  ));
-}
-
 function Body() {
   return (
     <div>
-      {/* Phần 1: 5 Quyển đầu */}
-      <div className="custom">
-        <p className="h1 text-center mt-3 mb-3">Sách mới</p>
-        <div className="bok">{renderFirstFiveBooks()}</div>
-      </div>
-
-      {/* Phần 2: 5 Quyển tiếp theo */}
-      <div className="custom2">
-        <p className="h1 text-center mt-3 mb-3">Sách bán chạy</p>
-        <div className="bok">{renderNextFiveBooks()}</div>
-      </div>
-
+      <BookList title="Sách mới" books={newBooks} />
+      <BookList title="Sách bán chạy" books={bestSellers} />
       {/* quang cao */}
       <div className="banner mt-5">
         <img src="./public/img/banner.webp" className="mx-auto"></img>
       </div>
-      {/* Phần 3: 4 Quyển cuối */}
-      <div className="custom3">
-        <p className="h1 text-center mt-3 mb-3">Combo</p>
-        <div className="bok">{renderLastFourBooks()}</div>
+      <BookList title="Combo" books={Combo} />
+      <div className="banner mt-5">
+        <img src="./public/img/bannermanga.webp" className="mx-auto"></img>
       </div>
+      <BookList title="Manga" books={Manga} />
+
       <div className="ship">
         <div className="container text-center my-5">
           <h2>Dịch vụ cửa hàng trực tuyến</h2>
