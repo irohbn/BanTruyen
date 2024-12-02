@@ -74,19 +74,25 @@ const Footer = () => {
                 <h6 className="text-uppercase fw-bold mb-4">
                   Nhà xuất bản ADHK
                 </h6>
-                <p> Giám đốc: Lê Đình Kiên</p>
                 <p>
-                  <i className="fas fa-home me-3"></i> Số 55 Quang Trung, Nguyễn
-                  Du, Hai Bà Trưng, Hà Nội
+                  {" "}
+                  <i class="fa-solid fa-user-tie me-2"></i> Giám đốc: Lê Đình
+                  Kiên
+                </p>
+                <p>
+                  <i className="fas fa-home me-3"></i>{" "}
+                  <a href="https://maps.app.goo.gl/uzyUykyDZ6T8GLrx5">
+                    Số 55 Quang Trung, Nguyễn Du, Hai Bà Trưng, Hà Nội
+                  </a>
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3"></i>
-                  AHDKbook@gmail.com
+                  <a href="mailto:>AHDKbook@gmail.com">AHDKbook@gmail.com</a>
                 </p>
                 <p>
-                  <i className="fas fa-phone me-3"></i>: (+84) 1900571596
+                  <i className="fas fa-phone me-3"></i>:
+                  <a href="tel: 1900571596">(+84) 1900571596</a>
                 </p>
-                <p>cskh_online@nxbADHKbook.com.vn</p>
               </div>
               {/* Grid column */}
             </div>
