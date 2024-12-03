@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Right */}
           <div>
             <a href="#" className="me-4 text-reset">
-              <i className="fab fa-facebook-f"></i>
+              <i className="fa-brands fa-facebook"></i>
             </a>
             <a href="#" className="me-4 text-reset">
               <i className="fab fa-youtube"></i>

@@ -1,8 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popper)
 import useToggleMenu from "../JS/useToggleMenu";
+import React, { useState } from "react";
+import { Modal, Button, Form } from "react-bootstrap";
 function Header() {
   const { isMenuOpen, toggleMenu } = useToggleMenu();
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
+
+  const handleLoginClose = () => setShowLogin(false);
+  const handleLoginShow = () => setShowLogin(true);
+
+  const handleRegisterClose = () => setShowRegister(false);
+  const handleRegisterShow = () => setShowRegister(true);
   return (
     <div className="headerr">
       <div className="footer1  ">
@@ -58,42 +68,196 @@ function Header() {
                 style={{ "--bs-scroll-height": "100px" }}
               >
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a href="#" className="nav-link  fs-5" aria-current="page">
                     Trang chủ
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" href="#">
+                  <a href="#" className="nav-link  fs-5">
                     Cửa Hàng
                   </a>
                 </li>
               </ul>
-              {/* login cua Hung */}
-              <div className="log nav-item d-flex ">
-                <a href="#" className=" nav-link me-4 ">
-                  <i class="fa-solid fa-right-to-bracket"></i>Đăng nhập
-                </a>
-                <a href="#" className="nav-link me-5 ">
-                  <i class="fas fa-edit"></i>Đăng ký
-                </a>
-              </div>
-              {/* gio hang cua Anh */}
-              <a href="#" className="giohang nav-link me-5 ">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span className="count">0</span>
-              </a>
-              {/* gio hang cua Anh */}
-              <form className="d-flex" role="search">
+              <form className="d-flex mt-1 me-5" role="search">
                 <input
-                  className="form-control me-2"
+                  className="form-control me-2   "
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success" type="submit">
+                <button className="btn btn-outline-success " type="submit">
                   Search
                 </button>
               </form>
+              {/* gio hang cua Anh */}
+              <a href="#" className="giohang nav-link me-5 ms-2 ">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span className="count">0</span>
+              </a>
+              {/* dang nhap dang ky */}
+              <div className="log nav-item d-flex ">
+                <a
+                  href="#"
+                  className=" nav-link me-4 mb-1 fs-5 dn"
+                  onClick={handleLoginShow}
+                >
+                  <i class="fa-solid fa-right-to-bracket"></i>Đăng nhập
+                </a>
+                <Modal
+                  show={showLogin}
+                  onHide={handleLoginClose}
+                  dialogClassName="custom-modal"
+                >
+                  <Modal.Header closeButton>
+                    <Modal.Title className="custom-title">
+                      Đăng nhập
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form className="custom-form">
+                      <Form.Group controlId="formBasicEmail" className="mb-3">
+                        <div className="input-group">
+                          <span className="input-group-text">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+                          <Form.Control
+                            type="email"
+                            placeholder="Email"
+                            className="custom-input"
+                          />
+                        </div>
+                      </Form.Group>
+
+                      <Form.Group
+                        controlId="formBasicPassword"
+                        className="mb-3"
+                      >
+                        <div className="input-group">
+                          <span className="input-group-text">
+                            <i class="fa fa-lock"></i>
+                          </span>
+                          <Form.Control
+                            type="password"
+                            placeholder="Mật khẩu"
+                            className="custom-input"
+                          />
+                        </div>
+                      </Form.Group>
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        className="custom-login-btn"
+                      >
+                        <b>Đăng nhập</b>
+                      </Button>
+
+                      <div className="text-center mb-3">
+                        <a href="#" className="forgot-password">
+                          Quên mật khẩu?
+                        </a>{" "}
+                        hoặc{" "}
+                        <a
+                          href="#"
+                          className="register"
+                          onClick={handleRegisterShow}
+                        >
+                          Đăng ký
+                        </a>
+                      </div>
+                    </Form>
+                  </Modal.Body>
+                </Modal>
+                <a
+                  href="#"
+                  className="nav-link me-5 mb-1 fs-5 dk"
+                  onClick={handleRegisterShow}
+                >
+                  <i class="fas fa-edit"></i>Đăng ký
+                </a>
+                <Modal
+                  show={showRegister}
+                  onHide={handleRegisterClose}
+                  dialogClassName="custom-modal"
+                >
+                  <Modal.Header closeButton>
+                    <Modal.Title className="custom-title">
+                      Tạo tài khoản
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form className="custom-form">
+                      <Form.Group
+                        controlId="formBasicFirstName"
+                        className="mb-3"
+                      >
+                        <div className="input-group">
+                          <span className="input-group-text">
+                            <i class="fa fa-user"></i>
+                          </span>
+                          <Form.Control
+                            type="text"
+                            placeholder="Họ"
+                            className="custom-input"
+                          />
+                        </div>
+                      </Form.Group>
+
+                      <Form.Group
+                        controlId="formBasicLastName"
+                        className="mb-3"
+                      >
+                        <div className="input-group">
+                          <span className="input-group-text">
+                            <i class="fa fa-user"></i>
+                          </span>
+                          <Form.Control
+                            type="password"
+                            placeholder="Tên"
+                            className="custom-input"
+                          />
+                        </div>
+                      </Form.Group>
+
+                      <Form.Group controlId="formBasicEmail" className="mb-3">
+                        <div className="input-group">
+                          <span className="input-group-text">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+                          <Form.Control
+                            type="email"
+                            placeholder="Email"
+                            className="custom-input"
+                          />
+                        </div>
+                      </Form.Group>
+
+                      <Form.Group
+                        controlId="formBasicPassword"
+                        className="mb-3"
+                      >
+                        <div className="input-group">
+                          <span className="input-group-text">
+                            <i class="fa fa-lock"></i>
+                          </span>
+                          <Form.Control
+                            type="password"
+                            placeholder="Mật khẩu"
+                            className="custom-input"
+                          />
+                        </div>
+                      </Form.Group>
+
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        className="custom-login-btn"
+                      >
+                        <b>Đăng ký</b>
+                      </Button>
+                    </Form>
+                  </Modal.Body>
+                </Modal>
+              </div>
             </div>
           </div>
         </nav>
