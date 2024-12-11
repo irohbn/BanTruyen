@@ -42,7 +42,7 @@ li {
 a {
   text-decoration: none;
   list-style: none;
-  color: red;
+  color: black;
 }
 a:hover {
   color: green;

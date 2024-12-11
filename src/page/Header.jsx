@@ -3,6 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popp
 import useToggleMenu from "../JS/useToggleMenu";
 import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function Header() {
   const { isMenuOpen, toggleMenu } = useToggleMenu();
   const [showLogin, setShowLogin] = useState(false);
@@ -18,13 +19,13 @@ function Header() {
       <div className="footer1  ">
         <div className="social">
           <a href="#">
-            <i class="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-facebook"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-youtube"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
         </div>
         <div className="welcome">
@@ -32,10 +33,10 @@ function Header() {
         </div>
         <div className="contact">
           <a href="tel:1900571596">
-            <i class="fa-solid fa-phone-volume"></i>(+84) 1900571596
+            <i className="fa-solid fa-phone-volume"></i>(+84) 1900571596
           </a>
           <a href="mailto:AHDKbook@gmail.com">
-            <i class="fa-solid fa-envelope"></i>AHDKbook@gmail.com
+            <i className="fa-solid fa-envelope"></i>AHDKbook@gmail.com
           </a>
         </div>
       </div>
@@ -68,14 +69,14 @@ function Header() {
                 style={{ "--bs-scroll-height": "100px" }}
               >
                 <li className="nav-item">
-                  <a href="#" className="nav-link  fs-5" aria-current="page">
+                  <Link className="nav-link active fs-5" to="/">
                     Trang chủ
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link  fs-5">
+                  <Link className="nav-link active fs-5" to="/shop">
                     Cửa Hàng
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <form className="d-flex mt-1 me-5" role="search">
@@ -91,7 +92,7 @@ function Header() {
               </form>
               {/* gio hang cua Anh */}
               <a href="#" className="giohang nav-link me-5 ms-2 ">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i className="fa-solid fa-bag-shopping"></i>
                 <span className="count">0</span>
               </a>
               {/* dang nhap dang ky */}
@@ -101,7 +102,7 @@ function Header() {
                   className=" nav-link me-4 mb-1 fs-5 dn"
                   onClick={handleLoginShow}
                 >
-                  <i class="fa-solid fa-right-to-bracket"></i>Đăng nhập
+                  <i className="fa-solid fa-right-to-bracket"></i>Đăng nhập
                 </a>
                 <Modal
                   show={showLogin}
