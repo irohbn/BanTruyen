@@ -11,7 +11,7 @@ const Menunav = ({ setSelectedCategory }) => {
     <div className="menu-container">
       {/* Nút ẩn/hiện menu */}
       <button onClick={toggleMenu} className="menu-toggle-btn">
-        Danh mục sản phẩm: {isMenuVisible ? "➕" : "➖"}
+        Danh mục sản phẩm: {isMenuVisible ? "➖" : "➕"}
       </button>
 
       {/* Menu sách */}

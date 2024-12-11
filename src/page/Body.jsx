@@ -9,6 +9,9 @@ function BookList({ title, books }) {
           <a href="#" className="sale" key={index}>
             <img src={book.img} alt={book.title} />
             <p>{book.title}</p>
+            <button>
+              <i className="fa-solid fa-cart-shopping "></i>
+            </button>
             <span className="prince">{book.price}</span>{" "}
             <s>{book.originalPrice}</s>
           </a>
