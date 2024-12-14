@@ -119,7 +119,7 @@ function Header() {
                       <Form.Group controlId="formBasicEmail" className="mb-3">
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                           </span>
                           <Form.Control
                             type="email"
@@ -135,7 +135,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-lock"></i>
+                            <i className="fa fa-lock"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -173,7 +173,7 @@ function Header() {
                   className="nav-link me-5 mb-1 fs-5 dk"
                   onClick={handleRegisterShow}
                 >
-                  <i class="fas fa-edit"></i>Đăng ký
+                  <i className="fas fa-edit"></i>Đăng ký
                 </a>
                 <Modal
                   show={showRegister}
@@ -193,7 +193,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-user"></i>
+                            <i className="fa fa-user"></i>
                           </span>
                           <Form.Control
                             type="text"
@@ -209,7 +209,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-user"></i>
+                            <i className="fa fa-user"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -222,7 +222,7 @@ function Header() {
                       <Form.Group controlId="formBasicEmail" className="mb-3">
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                           </span>
                           <Form.Control
                             type="email"
@@ -238,7 +238,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-lock"></i>
+                            <i className="fa fa-lock"></i>
                           </span>
                           <Form.Control
                             type="password"
