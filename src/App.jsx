@@ -7,7 +7,6 @@ import Header from "./page/Header";
 import Footer from "./page/Footer";
 import Body from "./page/Body";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./CSS/Header.css";
 import "./CSS/Body.css";
 import "./App.css";
