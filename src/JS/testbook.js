@@ -1,6 +1,6 @@
 export const newBooks = [
   {
-    img: "./public/img/anh1.jpg",
+    img: "anh1.jpg",
     title: "Xứ Sở Sương Mù ",
     price: "94,500đ",
     originalPrice: "105,000đ",
@@ -12,7 +12,7 @@ export const newBooks = [
     TrongLuong: "450 gram",
   },
   {
-    img: "./public/img/anh2.webp",
+    img: "anh2.webp",
     title: "Chuột típ ",
     price: "22,500đ",
     originalPrice: "25,000đ",
@@ -24,7 +24,7 @@ export const newBooks = [
     TrongLuong: "75 gram",
   },
   {
-    img: "./public/img/anh3.webp",
+    img: "anh3.webp",
     title: "Siêu nhân cua",
     price: "45,000đ",
     originalPrice: "50,000đ",
@@ -36,7 +36,7 @@ export const newBooks = [
     TrongLuong: "140 gram",
   },
   {
-    img: "./public/img/anh4.jpg",
+    img: "anh4.jpg",
     title: "Pokemon",
     price: "31,500đ",
     originalPrice: "35,000đ",
@@ -48,7 +48,7 @@ export const newBooks = [
     TrongLuong: "160 gram",
   },
   {
-    img: "./public/img/anh5.webp",
+    img: "anh5.webp",
     title: "Tý Quậy",
     price: "36,000đ",
     originalPrice: "40,000đ",
@@ -63,7 +63,7 @@ export const newBooks = [
 
 export const bestSellers = [
   {
-    img: "./public/img/anh6.jpg",
+    img: "anh6.jpg",
     title: "Conan",
     price: "94,500đ",
     originalPrice: "105,000đ",
@@ -75,7 +75,7 @@ export const bestSellers = [
     TrongLuong: "120 gram",
   },
   {
-    img: "./public/img/anh7.jpg",
+    img: "anh7.jpg",
     title: "Doraemon Nobita ",
     price: "22,500đ",
     originalPrice: "25,000đ",
@@ -87,7 +87,7 @@ export const bestSellers = [
     TrongLuong: "140 gram",
   },
   {
-    img: "./public/img/anh8.jpg",
+    img: "anh8.jpg",
     title: "Kaitokid",
     price: "45,000đ",
     originalPrice: "50,000đ",
@@ -99,7 +99,7 @@ export const bestSellers = [
     TrongLuong: "200 gram",
   },
   {
-    img: "./public/img/anh9.jpg",
+    img: "anh9.jpg",
     title: "Makuro",
     price: "31,500đ",
     originalPrice: "35,000đ",
@@ -111,7 +111,7 @@ export const bestSellers = [
     TrongLuong: "215 gram",
   },
   {
-    img: "./public/img/anh10.jpg",
+    img: "anh10.jpg",
     title: "Suichi akai",
     price: "36,000đ",
     originalPrice: "40,000đ",
@@ -126,7 +126,7 @@ export const bestSellers = [
 
 export const Combo = [
   {
-    img: "./public/img/anh11.jpg",
+    img: "anh11.jpg",
     title: "Combo Yona - (12 tập)",
     price: "270,000đ",
     originalPrice: "300,000đ",
@@ -138,7 +138,7 @@ export const Combo = [
     TrongLuong: "1500 gram",
   },
   {
-    img: "./public/img/anh12.webp",
+    img: "anh12.webp",
     title: "Combo Teppei (31 tập)",
     price: "679,500đ",
     originalPrice: "775,000đ",
@@ -150,7 +150,7 @@ export const Combo = [
     TrongLuong: "5425 gram",
   },
   {
-    img: "./public/img/anh13.webp",
+    img: "anh13.webp",
     title: "Combo Siêu đầu bếp nhí",
     price: "160,000đ",
     originalPrice: "200,000đ",
@@ -162,7 +162,7 @@ export const Combo = [
     TrongLuong: "600 gram",
   },
   {
-    img: "./public/img/anh14.webp",
+    img: "anh14.webp",
     title: "Doraemon BoxSet 1-4",
     price: "810,000đ",
     originalPrice: "900,000đ",
@@ -189,7 +189,7 @@ export const Combo = [
 
 export const Manga = [
   {
-    img: "./public/img/anh15.jpg",
+    img: "anh15.jpg",
     title: "Boruto Quyển 20",
     price: "22,500đ",
     originalPrice: "25,000đ",
@@ -201,7 +201,7 @@ export const Manga = [
     TrongLuong: "140 gram",
   },
   {
-    img: "./public/img/anh16.webp",
+    img: "anh16.webp",
     title: "Anh hai uramachi",
     price: "27,000đ",
     originalPrice: "30,000đ",
@@ -213,7 +213,7 @@ export const Manga = [
     TrongLuong: "160 gram",
   },
   {
-    img: "./public/img/anh17.jpg",
+    img: "anh17.jpg",
     title: "Học viện anh hùng",
     price: "27,000đ",
     originalPrice: "30,000đ",
@@ -225,7 +225,7 @@ export const Manga = [
     TrongLuong: "130  gram",
   },
   {
-    img: "./public/img/anh18.webp",
+    img: "anh18.webp",
     title: "DT-Conan",
     price: "198,000đ",
     originalPrice: "220,000đ",
@@ -237,7 +237,7 @@ export const Manga = [
     TrongLuong: "160 gram",
   },
   {
-    img: "./public/img/anh19.webp",
+    img: "anh19.webp",
     title: "Doraemon theo chủ đề ",
     price: "31,500đ",
     originalPrice: "35,000đ",
