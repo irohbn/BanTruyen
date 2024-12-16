@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import { newBooks, bestSellers, Combo, Manga } from "../JS/testbook";
 
 function BookList({ title, books }) {
@@ -6,12 +8,12 @@ function BookList({ title, books }) {
       <p className="h1 text-center mt-3 mb-3">{title}</p>
       <div className="bok">
         {books.map((book, index) => (
-          <a href="#" className="sale" key={index}>
-            <img src={book.img} alt={book.title} />
+          <Link to={`/product/${book.title}`} className="sale" key={index}>
+            <img src={`./public/img/${book.img}`} alt={book.title} />
             <p>{book.title}</p>
             <span className="prince">{book.price}</span>{" "}
             <s>{book.originalPrice}</s>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
@@ -20,6 +22,7 @@ function BookList({ title, books }) {
 function Body() {
   return (
     <div>
+      
       <BookList title="Sách mới" books={newBooks} />
       <BookList title="Sách bán chạy" books={bestSellers} />
       {/* quang cao */}
@@ -63,4 +66,5 @@ function Body() {
     </div>
   );
 }
+export {BookList};
 export default Body;

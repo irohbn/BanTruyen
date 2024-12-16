@@ -1,18 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popper)
-import useToggleMenu from "../JS/useToggleMenu";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
+import useToggleMenu from "../JS/useToggleMenu";
 function Header() {
   const { isMenuOpen, toggleMenu } = useToggleMenu();
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  const [searchState, setSearch]  = useState('');
+  const navigate = useNavigate();
 
   const handleLoginClose = () => setShowLogin(false);
   const handleLoginShow = () => setShowLogin(true);
 
   const handleRegisterClose = () => setShowRegister(false);
   const handleRegisterShow = () => setShowRegister(true);
+
+  const handleSearchSubmitForm = (event) => {
+    event.preventDefault();
+    navigate(`/search?query=${searchState}`);
+  }
   return (
     <div className="headerr">
       <div className="footer1  ">
@@ -68,7 +76,7 @@ function Header() {
                 style={{ "--bs-scroll-height": "100px" }}
               >
                 <li className="nav-item">
-                  <a href="#" className="nav-link  fs-5" aria-current="page">
+                  <a href="/" className="nav-link  fs-5" aria-current="page">
                     Trang chủ
                   </a>
                 </li>
@@ -78,12 +86,14 @@ function Header() {
                   </a>
                 </li>
               </ul>
-              <form className="d-flex mt-1 me-5" role="search">
+              {/* Search của Kiên */}
+              <form className="d-flex mt-1 me-5" role="search" onSubmit={handleSearchSubmitForm}>
                 <input
                   className="form-control me-2   "
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
+                  onChange={event=>setSearch(event.target.value)}
                 />
                 <button className="btn btn-outline-success " type="submit">
                   Search
@@ -263,14 +273,7 @@ function Header() {
         </nav>
       </div>
       <hr></hr>
-      <div id="slider">
-        <figure>
-          <img src="./public/img/slider1.webp" alt="" />
-          <img src="./public/img/slider2.webp" alt="" />
-          <img src="./public/img/slider3.webp" alt="" />
-          <img src="./public/img/slider4.webp" alt="" />
-        </figure>
-      </div>
+      
     </div>
   );
 }
