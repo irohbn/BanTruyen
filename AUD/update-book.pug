@@ -1,0 +1,18 @@
+html 
+    head 
+        title Update book
+    body 
+        h2 Update
+        form(action=`/book/${book._id}`, method="post",enctype='multipart/form-data')
+            input(type="file" name="avatar" )
+            input(type="text" name="title" value=book.title placeholder="title")
+            input(type="text" name="price" value=book.price placeholder="price")
+            input(type="text" name="originalPrice" value=book.originalPrice, placeholder="originalPrice")
+            input(type="text" name="Ma" value=book.Ma placeholder="Ma")
+            input(type="text" name="TacGia" value=book.TacGia placeholder="TacGia")
+            input(type="text" name="KhuonKho" value=book.KhuonKho placeholder="KhuonKho")
+            input(type="text" name="SoTrang" value=book.SoTrang placeholder="SoTrang")
+            input(type="text" name="DinhDang" value=book.DinhDang placeholder="DinhDang")
+            input(type="text" name="TrongLuong" value=book.TrongLuong placeholder="TrongLuong")
+            input(type="text" name="Theloai" value=book.Theloai placeholder="Theloai")
+            input(type="submit" value="Update")   
