@@ -11,15 +11,13 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "clsx": "^2.1.1",
     "mongodb": "^6.12.0",
     "pug": "^3.0.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.6",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
-=======
     "react-paginate": "^8.2.0",
->>>>>>> 6f32dd2a620f79d85e9efff830b0ebf0d80cd2d4
     "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
