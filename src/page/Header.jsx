@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popper)
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
 import useToggleMenu from "../JS/useToggleMenu";
 function Header() {
@@ -26,13 +26,13 @@ function Header() {
       <div className="footer1  ">
         <div className="social">
           <a href="#">
-            <i class="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-facebook"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-youtube"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
         </div>
         <div className="welcome">
@@ -40,10 +40,10 @@ function Header() {
         </div>
         <div className="contact">
           <a href="tel:1900571596">
-            <i class="fa-solid fa-phone-volume"></i>(+84) 1900571596
+            <i className="fa-solid fa-phone-volume"></i>(+84) 1900571596
           </a>
           <a href="mailto:AHDKbook@gmail.com">
-            <i class="fa-solid fa-envelope"></i>AHDKbook@gmail.com
+            <i className="fa-solid fa-envelope"></i>AHDKbook@gmail.com
           </a>
         </div>
       </div>
@@ -76,14 +76,14 @@ function Header() {
                 style={{ "--bs-scroll-height": "100px" }}
               >
                 <li className="nav-item">
-                  <a href="/" className="nav-link  fs-5" aria-current="page">
+                  <Link href="/" className="nav-link  fs-5" aria-current="page">
                     Trang chủ
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link  fs-5">
+                  <Link className="nav-link active fs-5" to="/shop">
                     Cửa Hàng
-                  </a>
+                  </Link>
                 </li>
               </ul>
               {/* Search của Kiên */}
@@ -101,7 +101,7 @@ function Header() {
               </form>
               {/* gio hang cua Anh */}
               <a href="#" className="giohang nav-link me-5 ms-2 ">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i className="fa-solid fa-bag-shopping"></i>
                 <span className="count">0</span>
               </a>
               {/* dang nhap dang ky */}
@@ -111,7 +111,7 @@ function Header() {
                   className=" nav-link me-4 mb-1 fs-5 dn"
                   onClick={handleLoginShow}
                 >
-                  <i class="fa-solid fa-right-to-bracket"></i>Đăng nhập
+                  <i className="fa-solid fa-right-to-bracket"></i>Đăng nhập
                 </a>
                 <Modal
                   show={showLogin}
@@ -128,7 +128,7 @@ function Header() {
                       <Form.Group controlId="formBasicEmail" className="mb-3">
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                           </span>
                           <Form.Control
                             type="email"
@@ -144,7 +144,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-lock"></i>
+                            <i className="fa fa-lock"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -182,7 +182,7 @@ function Header() {
                   className="nav-link me-5 mb-1 fs-5 dk"
                   onClick={handleRegisterShow}
                 >
-                  <i class="fas fa-edit"></i>Đăng ký
+                  <i className="fas fa-edit"></i>Đăng ký
                 </a>
                 <Modal
                   show={showRegister}
@@ -202,7 +202,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-user"></i>
+                            <i className="fa fa-user"></i>
                           </span>
                           <Form.Control
                             type="text"
@@ -218,7 +218,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-user"></i>
+                            <i className="fa fa-user"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -231,7 +231,7 @@ function Header() {
                       <Form.Group controlId="formBasicEmail" className="mb-3">
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                           </span>
                           <Form.Control
                             type="email"
@@ -247,7 +247,7 @@ function Header() {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-lock"></i>
+                            <i className="fa fa-lock"></i>
                           </span>
                           <Form.Control
                             type="password"

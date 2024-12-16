@@ -10,10 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@fastify/formbody": "^8.0.1",
+    "@fastify/mongodb": "^9.0.1",
+    "@fastify/multipart": "^9.0.1",
+    "@fastify/static": "^8.0.3",
+    "@fastify/view": "^10.0.1",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
+    "fastify": "^5.2.0",
+    "mongodb": "^6.12.0",
+    "pug": "^3.0.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.6",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
+=======
+    "react-paginate": "^8.2.0",
+>>>>>>> 6f32dd2a620f79d85e9efff830b0ebf0d80cd2d4
     "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
@@ -27,5 +41,10 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "vite": "^5.4.10"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

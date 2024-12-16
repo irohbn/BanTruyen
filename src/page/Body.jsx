@@ -3,6 +3,22 @@ import { Link } from "react-router-dom";
 import { newBooks, bestSellers, Combo, Manga } from "../JS/testbook";
 
 function BookList({ title, books }) {
+  const limitedBooks = [];
+  for (let i = 0; i < books.length && i < 5; i++) {
+    limitedBooks.push(
+      <a href="#" className="sale" key={i}>
+        <img src={books[i].img} alt={books[i].title} />
+        <p>{books[i].title}</p>
+        <button>
+          <i className="fa-solid fa-cart-shopping"></i>
+        </button>
+        <span className="prince">{books[i].price}</span>{" "}
+        <s>{books[i].originalPrice}</s>
+      </a>
+    );
+  }
+
+  // Trả về JSX
   return (
     <div className="custom">
       <p className="h1 text-center mt-3 mb-3">{title}</p>
