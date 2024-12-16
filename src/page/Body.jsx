@@ -38,7 +38,14 @@ function BookList({ title, books }) {
 function Body() {
   return (
     <div>
-      
+    <div id="slider">
+        <figure>
+          <img src="./public/img/slider1.webp" alt="" />
+          <img src="./public/img/slider2.webp" alt="" />
+          <img src="./public/img/slider3.webp" alt="" />
+          <img src="./public/img/slider4.webp" alt="" />
+        </figure>
+      </div>
       <BookList title="Sách mới" books={newBooks} />
       <BookList title="Sách bán chạy" books={bestSellers} />
       {/* quang cao */}
