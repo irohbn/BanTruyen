@@ -17,7 +17,7 @@ function Search() {
     console.log(resultSearch);
     return (
         <div>
-            {(resultSearch.length > 0) ? (<BookList title="Kết quả tìm kiêm." books={resultSearch}/>) : <p>{`Không tìm thấy "${query}"`}</p>}
+            {(resultSearch.length > 0) ? (<BookList title="Kết quả tìm kiếm." books={resultSearch}/>) : <p>{`Không tìm thấy "${query}"`}</p>}
         </div>
     )
 }
