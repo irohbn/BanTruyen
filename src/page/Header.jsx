@@ -10,7 +10,7 @@ function Header({ cartBooks }) {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [showCart, setShowCart] = useState(false);
-
+  
   const handleLoginClose = () => setShowLogin(false);
   const handleLoginShow = () => setShowLogin(true);
 
@@ -19,11 +19,6 @@ function Header({ cartBooks }) {
 
   const toggleCart = () => {
     setShowCart(!showCart);
-  };
-
-  const handleRemoveFromCart = (index) => {
-    const updateCart = cartBooks.filter((_, i) => i !== index);
-    setCartBooks(updateCart);
   };
 
   return (
@@ -304,8 +299,8 @@ function Header({ cartBooks }) {
                               <td className="product-row"><img src={book.img} alt="" />{book.title}</td>
                               <td><p><span>{book.price}</span><sup>đ</sup></p></td>
                               <td className="number-input-row">
-                                <input type="number" value={book.count} min={1} /></td>
-                              <td className="delete-cell" onClick={() => handleRemoveFromCart(index)}>
+                                <input type="number" value={book.count} min={1} readOnly /></td>
+                              <td className="delete-cell">
                                 Xóa
                               </td>
                             </tr>
@@ -314,7 +309,7 @@ function Header({ cartBooks }) {
                       </table>
 
                       <div className="price-total">
-                        <p>Tổng tiền:
+                        <p>Tổng tiền: 
                           <span>
                             {
                               cartBooks.reduce((total, book) => {
