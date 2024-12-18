@@ -300,9 +300,7 @@ function Header({ cartBooks }) {
                               <td><p><span>{book.price}</span><sup>đ</sup></p></td>
                               <td className="number-input-row">
                                 <input type="number" value={book.count} min={1} /></td>
-                              <td className="delete-cell">
-                                Xóa
-                              </td>
+                              <td className="delete-cell"> Xóa</td>
                             </tr>
                           ))}
                         </tbody>
