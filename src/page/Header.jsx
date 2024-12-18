@@ -299,7 +299,7 @@ function Header({ cartBooks }) {
                               <td className="product-row"><img src={book.img} alt="" />{book.title}</td>
                               <td><p><span>{book.price}</span><sup>đ</sup></p></td>
                               <td className="number-input-row">
-                                <input type="number" value={book.count} min={1} readOnly /></td>
+                                <input type="number" value={book.count} min={1} /></td>
                               <td className="delete-cell">
                                 Xóa
                               </td>
