@@ -76,8 +76,8 @@ const Footer = () => {
                 </h6>
                 <p>
                   {" "}
-                  <i class="fa-solid fa-user-tie me-2"></i> Giám đốc: Lê Đình
-                  Kiên
+                  <i className="fa-solid fa-user-tie me-2"></i> Giám đốc: Lê
+                  Đình Kiên
                 </p>
                 <p>
                   <i className="fas fa-home me-3"></i>{" "}

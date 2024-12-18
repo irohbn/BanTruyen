@@ -1,18 +1,22 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popper)
+import ProductDetail from "./productdetail/ProductDetail";
+import Search from "./search/Search";
 import Header from "./page/Header";
 import Footer from "./page/Footer";
 import Body from "./page/Body";
+<<<<<<< HEAD
 import BookCategory from "./page/BookCategory/BookCategory";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+=======
+import React from "react";
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
 import "./CSS/Header.css";
 import "./CSS/Body.css";
 import "./App.css";
-import "./CSS/BookCategory.css";
-import AddBookPage from "./page/BookCategory/AddBookPage";
-import EditBookPage from "./page/BookCategory/EditBookPage";
-
+import "./CSS/Shop.css";
 function App() {
   const [cartBooks, setCartBooks] = useState([]);
 
@@ -35,6 +39,7 @@ function App() {
   };
 
   return (
+<<<<<<< HEAD
     <Router>
       <div className="App">
         <Header cartBooks={cartBooks} />
@@ -47,6 +52,17 @@ function App() {
         <Footer />
       </div>
     </Router>
+=======
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Body />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+      <Footer />
+    </div>
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
   );
 }
 

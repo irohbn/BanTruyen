@@ -1,8 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import JS (bao gồm Popper)
-import useToggleMenu from "../JS/useToggleMenu";
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Modal, Button, Form } from "react-bootstrap";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
 function Header({ cartBooks }) {
@@ -11,16 +12,33 @@ function Header({ cartBooks }) {
   const [showRegister, setShowRegister] = useState(false);
   const [showCart, setShowCart] = useState(false);
   
+=======
+import useToggleMenu from "../JS/useToggleMenu";
+function Header() {
+  const { isMenuOpen, toggleMenu } = useToggleMenu();
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
+  const [searchState, setSearch]  = useState('');
+  const navigate = useNavigate();
+
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
   const handleLoginClose = () => setShowLogin(false);
   const handleLoginShow = () => setShowLogin(true);
 
   const handleRegisterClose = () => setShowRegister(false);
   const handleRegisterShow = () => setShowRegister(true);
 
+<<<<<<< HEAD
   const toggleCart = () => {
     setShowCart(!showCart);
   };
 
+=======
+  const handleSearchSubmitForm = (event) => {
+    event.preventDefault();
+    navigate(`/search?query=${searchState}`);
+  }
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
   return (
     <div className="headerr">
       <div className="footer1  ">
@@ -78,7 +96,7 @@ function Header({ cartBooks }) {
                 style={{ "--bs-scroll-height": "100px" }}
               >
                 <li className="nav-item">
-                  <Link className="nav-link active fs-5" to="/">
+                  <Link href="/" className="nav-link  fs-5" aria-current="page">
                     Trang chủ
                   </Link>
                 </li>
@@ -88,12 +106,14 @@ function Header({ cartBooks }) {
                   </Link>
                 </li>
               </ul>
-              <form className="d-flex mt-1 me-5" role="search">
+              {/* Search của Kiên */}
+              <form className="d-flex mt-1 me-5" role="search" onSubmit={handleSearchSubmitForm}>
                 <input
                   className="form-control me-2   "
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
+                  onChange={event=>setSearch(event.target.value)}
                 />
                 <button className="btn btn-outline-success " type="submit">
                   Search
@@ -124,7 +144,7 @@ function Header({ cartBooks }) {
                       <Form.Group controlId="formBasicEmail" className="mb-3">
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                           </span>
                           <Form.Control
                             type="email"
@@ -140,7 +160,7 @@ function Header({ cartBooks }) {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-lock"></i>
+                            <i className="fa fa-lock"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -178,7 +198,7 @@ function Header({ cartBooks }) {
                   className="nav-link me-5 mb-1 fs-5 dk"
                   onClick={handleRegisterShow}
                 >
-                  <i class="fas fa-edit"></i>Đăng ký
+                  <i className="fas fa-edit"></i>Đăng ký
                 </a>
                 <Modal
                   show={showRegister}
@@ -198,7 +218,7 @@ function Header({ cartBooks }) {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-user"></i>
+                            <i className="fa fa-user"></i>
                           </span>
                           <Form.Control
                             type="text"
@@ -214,7 +234,7 @@ function Header({ cartBooks }) {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-user"></i>
+                            <i className="fa fa-user"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -227,7 +247,7 @@ function Header({ cartBooks }) {
                       <Form.Group controlId="formBasicEmail" className="mb-3">
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-envelope"></i>
+                            <i className="fa fa-envelope"></i>
                           </span>
                           <Form.Control
                             type="email"
@@ -243,7 +263,7 @@ function Header({ cartBooks }) {
                       >
                         <div className="input-group">
                           <span className="input-group-text">
-                            <i class="fa fa-lock"></i>
+                            <i className="fa fa-lock"></i>
                           </span>
                           <Form.Control
                             type="password"
@@ -327,14 +347,7 @@ function Header({ cartBooks }) {
         </nav>
       </div>
       <hr></hr>
-      <div id="slider">
-        <figure>
-          <img src="./public/img/slider1.webp" alt="" />
-          <img src="./public/img/slider2.webp" alt="" />
-          <img src="./public/img/slider3.webp" alt="" />
-          <img src="./public/img/slider4.webp" alt="" />
-        </figure>
-      </div>
+      
     </div>
   );
 };

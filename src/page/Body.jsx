@@ -1,11 +1,34 @@
+
+import { Link } from "react-router-dom";
 import { newBooks, bestSellers, Combo, Manga } from "../JS/testbook";
 
+<<<<<<< HEAD
 function BookList({ title, books, addToCart }) {
+=======
+function BookList({ title, books }) {
+  const limitedBooks = [];
+  for (let i = 0; i < books.length && i < 5; i++) {
+    limitedBooks.push(
+      <a href="#" className="sale" key={i}>
+        <img src={books[i].img} alt={books[i].title} />
+        <p>{books[i].title}</p>
+        <button>
+          <i className="fa-solid fa-cart-shopping"></i>
+        </button>
+        <span className="prince">{books[i].price}</span>{" "}
+        <s>{books[i].originalPrice}</s>
+      </a>
+    );
+  }
+
+  // Trả về JSX
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
   return (
     <div className="custom">
       <p className="h1 text-center mt-3 mb-3">{title}</p>
       <div className="bok">
         {books.map((book, index) => (
+<<<<<<< HEAD
           <div className="sale" key={index}>
             <img src={book.img} alt={book.title} />
             <p>{book.title}</p>
@@ -19,6 +42,14 @@ function BookList({ title, books, addToCart }) {
               <i className="fa-solid fa-cart-shopping "></i> Thêm vào giỏ hàng
             </button>
           </div>
+=======
+          <Link to={`/product/${book.title}`} className="sale" key={index}>
+            <img src={`./public/img/${book.img}`} alt={book.title} />
+            <p>{book.title}</p>
+            <span className="prince">{book.price}</span>{" "}
+            <s>{book.originalPrice}</s>
+          </Link>
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
         ))}
       </div>
     </div>
@@ -27,8 +58,21 @@ function BookList({ title, books, addToCart }) {
 function Body({onCartChange}) {
   return (
     <div>
+<<<<<<< HEAD
       <BookList title="Sách mới" books={newBooks}  addToCart={onCartChange}/>
       <BookList title="Sách bán chạy" books={bestSellers} addToCart={onCartChange}/>
+=======
+    <div id="slider">
+        <figure>
+          <img src="./public/img/slider1.webp" alt="" />
+          <img src="./public/img/slider2.webp" alt="" />
+          <img src="./public/img/slider3.webp" alt="" />
+          <img src="./public/img/slider4.webp" alt="" />
+        </figure>
+      </div>
+      <BookList title="Sách mới" books={newBooks} />
+      <BookList title="Sách bán chạy" books={bestSellers} />
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
       {/* quang cao */}
       <div className="banner mt-5">
         <img src="./public/img/banner.webp" className="mx-auto"></img>
@@ -70,4 +114,5 @@ function Body({onCartChange}) {
     </div>
   );
 }
+export {BookList};
 export default Body;
