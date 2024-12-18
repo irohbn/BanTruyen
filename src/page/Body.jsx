@@ -1,39 +1,43 @@
 import { newBooks, bestSellers, Combo, Manga } from "../JS/testbook";
 
-function BookList({ title, books }) {
+function BookList({ title, books, addToCart }) {
   return (
     <div className="custom">
       <p className="h1 text-center mt-3 mb-3">{title}</p>
       <div className="bok">
         {books.map((book, index) => (
-          <a href="#" className="sale" key={index}>
+          <div className="sale" key={index}>
             <img src={book.img} alt={book.title} />
             <p>{book.title}</p>
-            <button>
-              <i className="fa-solid fa-cart-shopping "></i>
-            </button>
+
             <span className="prince">{book.price}</span>{" "}
             <s>{book.originalPrice}</s>
-          </a>
+            <button
+              key={index}
+              onClick={() => addToCart(book)}
+            >
+              <i className="fa-solid fa-cart-shopping "></i> Thêm vào giỏ hàng
+            </button>
+          </div>
         ))}
       </div>
     </div>
   );
 }
-function Body() {
+function Body({onCartChange}) {
   return (
     <div>
-      <BookList title="Sách mới" books={newBooks} />
-      <BookList title="Sách bán chạy" books={bestSellers} />
+      <BookList title="Sách mới" books={newBooks}  addToCart={onCartChange}/>
+      <BookList title="Sách bán chạy" books={bestSellers} addToCart={onCartChange}/>
       {/* quang cao */}
       <div className="banner mt-5">
         <img src="./public/img/banner.webp" className="mx-auto"></img>
       </div>
-      <BookList title="Combo" books={Combo} />
+      <BookList title="Combo" books={Combo} addToCart={onCartChange}/>
       <div className="banner mt-5">
         <img src="./public/img/bannermanga.webp" className="mx-auto"></img>
       </div>
-      <BookList title="Manga" books={Manga} />
+      <BookList title="Manga" books={Manga} addToCart={onCartChange}/>
 
       <div className="ship">
         <div className="container text-center my-5">
