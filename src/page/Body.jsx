@@ -1,17 +1,13 @@
-
 import { Link } from "react-router-dom";
 import { newBooks, bestSellers, Combo, Manga } from "../JS/testbook";
 
-function BookList({ title, books }) {
+function BookList({ title, books, addToCart }) {
   const limitedBooks = [];
   for (let i = 0; i < books.length && i < 5; i++) {
     limitedBooks.push(
       <a href="#" className="sale" key={i}>
         <img src={books[i].img} alt={books[i].title} />
         <p>{books[i].title}</p>
-        <button>
-          <i className="fa-solid fa-cart-shopping"></i>
-        </button>
         <span className="prince">{books[i].price}</span>{" "}
         <s>{books[i].originalPrice}</s>
       </a>
@@ -27,6 +23,9 @@ function BookList({ title, books }) {
           <Link to={`/product/${book.title}`} className="sale" key={index}>
             <img src={`./public/img/${book.img}`} alt={book.title} />
             <p>{book.title}</p>
+            <button key={index} onClick={() => addToCart(book)}>
+              <i className="fa-solid fa-cart-shopping "></i>
+            </button>
             <span className="prince">{book.price}</span>{" "}
             <s>{book.originalPrice}</s>
           </Link>
@@ -35,10 +34,10 @@ function BookList({ title, books }) {
     </div>
   );
 }
-function Body() {
+function Body({ onCartChange }) {
   return (
     <div>
-    <div id="slider">
+      <div id="slider">
         <figure>
           <img src="./public/img/slider1.webp" alt="" />
           <img src="./public/img/slider2.webp" alt="" />
@@ -46,17 +45,21 @@ function Body() {
           <img src="./public/img/slider4.webp" alt="" />
         </figure>
       </div>
-      <BookList title="Sách mới" books={newBooks} />
-      <BookList title="Sách bán chạy" books={bestSellers} />
+      <BookList title="Sách mới" books={newBooks} addToCart={onCartChange} />
+      <BookList
+        title="Sách bán chạy"
+        books={bestSellers}
+        addToCart={onCartChange}
+      />
       {/* quang cao */}
       <div className="banner mt-5">
         <img src="./public/img/banner.webp" className="mx-auto"></img>
       </div>
-      <BookList title="Combo" books={Combo} />
+      <BookList title="Combo" books={Combo} addToCart={onCartChange} />
       <div className="banner mt-5">
         <img src="./public/img/bannermanga.webp" className="mx-auto"></img>
       </div>
-      <BookList title="Manga" books={Manga} />
+      <BookList title="Manga" books={Manga} addToCart={onCartChange} />
 
       <div className="ship">
         <div className="container text-center my-5">
@@ -89,5 +92,5 @@ function Body() {
     </div>
   );
 }
-export {BookList};
+export { BookList };
 export default Body;

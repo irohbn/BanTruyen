@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 img {
   width: 192px;
@@ -122,4 +123,18 @@ s {
   100% {
     left: 0;
   }
+}
+.fa-cart-shopping {
+  background-color: #4caf50; /* Màu nền mặc định */
+  color: white; /* Màu chữ mặc định */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.fa-cart-shopping:hover {
+  background-color: FFC0CB;
+  color: black;
 }
