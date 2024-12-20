@@ -487,7 +487,7 @@ export const WingBook = [
     SoTrang: " 192",
     DinhDang: "bìa mềm",
     TrongLuong: " 205 gram",
-    Loai: "wingbook",
+    Loai: "WingBooks",
   },
 ];
 // van hoc nuoc ngoai
