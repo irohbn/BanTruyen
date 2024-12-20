@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 img {
   width: 192px;
@@ -77,6 +78,22 @@ s {
     font-size: 0.8rem; /* Thu nhỏ giá gạch ngang */
   }
 }
+<<<<<<< HEAD
+.fa-solid fa-cart-shopping{ 
+background-color: #4CAF50; /* Màu nền mặc định */
+            color: white; /* Màu chữ mặc định */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+}
+.fa-solid fa-cart-shopping:hover {
+  background-color: FFC0CB;
+  color:black;
+}
+=======
 
 #slider {
   overflow: hidden;
@@ -123,3 +140,21 @@ s {
     left: 0;
   }
 }
+<<<<<<< HEAD
+.fa-cart-shopping {
+  background-color: #4caf50; /* Màu nền mặc định */
+  color: white; /* Màu chữ mặc định */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.fa-cart-shopping:hover {
+  background-color: FFC0CB;
+  color: black;
+}
+=======
+>>>>>>> 7db4d0db5a6bcb3c3d8d3962f2969fba1218f4fb
+>>>>>>> b61e13314d349c2527d27c99b207118d8d95c1b8

@@ -72,7 +72,7 @@ const Footer = () => {
 
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">
-                  Nhà xuất bản ADHK
+                  Nhà xuất bản FOUR
                 </h6>
                 <p>
                   {" "}
@@ -87,7 +87,7 @@ const Footer = () => {
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3"></i>
-                  <a href="mailto:>AHDKbook@gmail.com">AHDKbook@gmail.com</a>
+                  <a href="mailto:>AHDKbook@gmail.com">fourbook@gmail.com</a>
                 </p>
                 <p>
                   <i className="fas fa-phone me-3"></i>:
@@ -108,7 +108,7 @@ const Footer = () => {
         >
           © 2024 Copyright:
           <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-            ADHKbook.com
+            fourbook.com
           </a>
         </div>
         {/* Copyright */}
