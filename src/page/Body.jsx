@@ -23,8 +23,12 @@ function BookList({ title, books }) {
           <Link to={`/product/${book.title}`} className="sale" key={index}>
             <img src={`./public/img/${book.img}`} alt={book.title} />
             <p>{book.title}</p>
-            <button key={index} onClick={() => addToCart(book)}>
-              <i className="fa-solid fa-cart-shopping "></i>
+            <button
+              key={index}
+              onClick={() => addToCart(book)}
+              className="giohangcuadung"
+            >
+              🛒
             </button>
             <span className="prince">{book.price}</span>{" "}
             <s>{book.originalPrice}</s>

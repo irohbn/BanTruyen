@@ -124,14 +124,14 @@ a:hover {
 }
 .close-btn {
   position: absolute;
-  top: 10px; 
-  right: 10px; 
+  top: 10px;
+  right: 10px;
   background: none;
   border: none;
-  font-size: 15px; 
+  font-size: 15px;
   color: #333;
-  cursor: pointer; 
-  z-index: 1001; 
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .giohang table thead tr th {
@@ -143,10 +143,10 @@ a:hover {
   border-bottom: 2px solid #ddd;
 }
 .giohang table tbody tr {
-  border-bottom: 1px solid #FFC0CB;
+  border-bottom: 1px solid #ffc0cb;
   margin-bottom: 10px;
   display: block;
-  padding-bottom: 10px ;
+  padding-bottom: 10px;
   line-height: 50px;
   height: 50px;
 }
@@ -162,9 +162,6 @@ a:hover {
   padding: 10px;
   vertical-align: middle;
 }
-
-
-
 
 .product-row {
   display: flex;
@@ -189,13 +186,11 @@ a:hover {
   outline: none;
 }
 .delete-cell {
-  
   font-weight: bold;
   cursor: pointer;
   text-align: right;
 }
 .delete-cell:hover {
-  
   color: #ff4d4f;
 }
 .price-total {
@@ -341,22 +336,19 @@ button {
   border-radius: 5px;
 }
 
-<<<<<<< HEAD
-=======
 .custom-login-btn {
   width: 100%;
   margin-top: 10px;
   padding: 9px;
   font-size: 18px;
   border-radius: 5px;
-  background-color: #FFC0CB;
+  background-color: #ffc0cb;
 }
 .custom-login-btn:hover {
-  background-color: #FFC0CB;
+  background-color: #ffc0cb;
   text-decoration: none;
 }
 
->>>>>>> b61e13314d349c2527d27c99b207118d8d95c1b8
 /* Links */
 .forgot-password,
 .register {
@@ -494,4 +486,10 @@ button {
 .logoanh {
   width: 60px;
   height: 40px;
+}
+.inputKien {
+  width: 400px;
+}
+.user-info {
+  margin-right: 20px;
 }

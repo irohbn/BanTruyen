@@ -112,7 +112,7 @@ function Header({ cartBooks }) {
                 onSubmit={handleSearchSubmitForm}
               >
                 <input
-                  className="form-control me-2   "
+                  className="form-control me-2 inputKien  "
                   type="search"
                   placeholder="Search"
                   aria-label="Search"

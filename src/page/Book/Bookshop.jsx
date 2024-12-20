@@ -17,9 +17,7 @@ function BookList({ books }) {
           <Link to={`/product/${book.title}`} className="sale">
             <img src={`./public/img/${book.img}`} alt={book.title} />
             <p>{book.title}</p>
-            <button>
-              <i className="fa-solid fa-cart-shopping"></i>
-            </button>
+            <button className="giohangcuadung">🛒</button>
             <span className="prince">{book.price}</span>{" "}
             <s>{book.originalPrice}</s>
           </Link>
