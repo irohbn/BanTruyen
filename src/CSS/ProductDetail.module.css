@@ -42,7 +42,20 @@
     color: rgb(255, 60, 50);
 }
 hr{
-    width: 300px;
+    width: 100%;
+}
+.content{
+    display: flex;
+}
+.container_btn{
+    padding: 50px;
+}
+ul {
+    color: rgb(92, 92, 92);
+    padding: 0;
+}
+li{
+    padding: 5px 0;
 }
 .cart,.buy{
     background-color: red;

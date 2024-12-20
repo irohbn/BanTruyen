@@ -39,8 +39,20 @@ function ProductDetail(){
                     </p>
                     {product.originalPrice && <s className={styles.price}>{product.originalPrice}</s>}
                     <hr />
-                    <button className={clsx(styles.btn, styles.cart)}>Thêm vào giỏ hàng</button>
-                    <button className={clsx(styles.btn, styles.buy)}>Mua Ngay</button>
+                    <div className={styles.content}>
+                        <ul className={clsx(styles.list_content)}>
+                            <li>Mã:<b>{product.Ma}</b></li>
+                            <li>Tác giả:<b style={{color: 'red'}}>{product.TacGia}</b></li>
+                            <li>Khuôn khổ:{product.KhuonKho}</li>
+                            <li>Số trang:{product.SoTrang}</li>
+                            <li>Định dang:{product.DinhDang}</li>
+                            <li>Trọng lượng:{product.TrongLuong}</li>
+                        </ul>
+                        <div className={clsx(styles.container_btn)}>
+                            <button className={clsx(styles.btn, styles.cart)}>Thêm vào giỏ hàng</button>
+                            <button className={clsx(styles.btn, styles.buy)}>Mua Ngay</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
