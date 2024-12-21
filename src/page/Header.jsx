@@ -100,9 +100,19 @@ function Header({ cartBooks }) {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link active fs-5" href="/#gt">
+                    Giới thiệu
+                  </a>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link active fs-5" to="/shop">
                     Cửa Hàng
                   </Link>
+                </li>
+                <li className="nav-item ">
+                  <a href="#footer" className="nav-link active fs-5">
+                    Liên hệ
+                  </a>
                 </li>
               </ul>
               {/* Search của Kiên */}

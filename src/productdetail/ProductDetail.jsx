@@ -9,6 +9,7 @@ import {
   Manga,
   WingBook,
   VHNN,
+  VHVN,
 } from "../JS/testbook";
 
 function ProductDetail() {
@@ -20,6 +21,7 @@ function ProductDetail() {
     ...Manga,
     ...WingBook,
     ...VHNN,
+    ...VHVN,
   ];
   const product = allBooks.find((book) => book.title.trim() === id);
   if (!product) return <div>Chưa có thông tin truyện</div>;

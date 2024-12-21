@@ -50,6 +50,31 @@ function Body({ onCartChange }) {
           <img src="./public/img/slider4.webp" alt="" />
         </figure>
       </div>
+      <div className="gioithieu" id="gt">
+        <h2 className="text-center">Giới thiệu về chúng tôi</h2>
+        <p className="text-center">
+          Chào mừng bạn đến với trang bán truyện của chúng tôi!
+        </p>
+        <div className="trangtri d-flex">
+          <div className="traitrangti d-flex  me-5 text-break">
+            <p className="text-break ">
+              Chúng tôi cam kết mang đến cho bạn những trải nghiệm tuyệt vời qua
+              từng trang truyện. Với sứ mệnh chia sẻ niềm đam mê đọc truyện,
+              chúng tôi cung cấp các tựa sách đa dạng từ truyện tranh, tiểu
+              thuyết, truyện ngắn cho đến những tác phẩm kinh điển, phù hợp với
+              mọi lứa tuổi và sở thích. Tại đây, bạn sẽ tìm thấy: Những bộ
+              truyện mới nhất và hấp dẫn nhất. Các chương trình ưu đãi đặc biệt
+              dành cho khách hàng thân thiết. Một cộng đồng yêu thích truyện nơi
+              bạn có thể chia sẻ và kết nối. Chúng tôi luôn nỗ lực không ngừng
+              để đem lại sự hài lòng cho bạn, từ chất lượng sản phẩm đến dịch vụ
+              hỗ trợ.
+            </p>
+          </div>
+          <div className="phaitrangtri d-flex ms-5">
+            <img src="./public/img/about.png"></img>
+          </div>
+        </div>
+      </div>
       <BookList title="Sách mới" books={newBooks} />
       <BookList title="Sách bán chạy" books={bestSellers} />
       {/* quang cao */}

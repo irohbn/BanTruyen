@@ -1,7 +1,10 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="text-center text-lg-start bg-body-tertiary text-muted">
+      <footer
+        className="text-center text-lg-start bg-body-tertiary text-muted"
+        id="footer"
+      >
         {/* Section: Social media */}
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           {/* Left */}
@@ -31,20 +34,6 @@ const Footer = () => {
           <div className="container text-center text-md-start mt-5">
             {/* Grid row */}
             <div className="row mt-3">
-              {/* Grid column */}
-              <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                {/* Content */}
-                <h6 className="text-uppercase fw-bold mb-4">
-                  Giấy phép thành lập Nhà xuất bản
-                </h6>
-                <p>
-                  Giấy phép số: 517/GP-BTTTT ngày 6/10/2015 của Bộ Thông tin và
-                  Truyền thông
-                </p>
-              </div>
-              {/* Grid column */}
-
-              {/* Grid column */}
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Hỗ trợ</h6>
@@ -71,9 +60,7 @@ const Footer = () => {
               </div>
 
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">
-                  Nhà xuất bản FOUR
-                </h6>
+                <h6 className="text-uppercase fw-bold mb-4">FOUR BOOK</h6>
                 <p>
                   {" "}
                   <i className="fa-solid fa-user-tie me-2"></i> Giám đốc: Lê

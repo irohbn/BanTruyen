@@ -7,6 +7,7 @@ import {
   Manga,
   WingBook,
   VHNN,
+  VHVN,
 } from "../../JS/testbook";
 
 function BookList({ books }) {
@@ -35,6 +36,7 @@ function Bookshop() {
     ...Manga,
     ...WingBook,
     ...VHNN,
+    ...VHVN,
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("Tất cả");
@@ -75,10 +77,6 @@ function Bookshop() {
     const priceA = parseFloat(a.price.replace(".", ""));
     const priceB = parseFloat(b.price.replace(".", ""));
     switch (sortOption) {
-      case "newest":
-        return new Date(b.date) - new Date(a.date);
-      case "oldest":
-        return new Date(a.date) - new Date(b.date);
       case "priceAsc":
         return priceA - priceB;
       case "priceDesc":
@@ -106,6 +104,7 @@ function Bookshop() {
     "ComBo",
     "WingBooks",
     "Văn học nước ngoài",
+    "Văn học trong nước",
   ];
 
   const priceRanges = [
@@ -133,7 +132,7 @@ function Bookshop() {
             className="toggle-button ms-5 "
             onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
           >
-            {isCategoryMenuOpen ? "-" : "+"}
+            {isCategoryMenuOpen ? "➖" : "➕"}
           </button>
         </p>
         {isCategoryMenuOpen && (
@@ -156,7 +155,7 @@ function Bookshop() {
             className="toggle-button ms-5 "
             onClick={() => setIsPriceMenuOpen(!isPriceMenuOpen)}
           >
-            {isPriceMenuOpen ? "-" : "+"}
+            {isPriceMenuOpen ? "➖" : "➕"}
           </button>
         </p>
         {isPriceMenuOpen && (
@@ -203,8 +202,6 @@ function Bookshop() {
           }}
         >
           {[
-            { label: "Mới nhất", value: "newest" },
-            { label: "Cũ nhất", value: "oldest" },
             { label: "Giá tăng dần", value: "priceAsc" },
             { label: "Giá giảm dần", value: "priceDesc" },
             { label: "A-Z", value: "az" },

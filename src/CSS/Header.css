@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .footer1 {
   background-color: pink;
   width: 100%;
